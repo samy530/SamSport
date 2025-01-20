@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits - SamSport</title>
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/produits.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="icon" href="../images/logo.png" type="image/png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/logo.png" alt="SportEmpire Logo" width="50">
+            <span>SamSport</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="./produits.html">Produits</a></li>
+                <li><a href="./connexion.html">Connexion</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./apropos.html">A-propos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="header-produits">
+        <h1>Nos Produits</h1>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Rechercher un produit...">
+            <button class="search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </div>
+    
+
+    <section class="filters">
+        <button class="btn-main">Tous les produits</button>
+        <button class="btn-trier">Trier par prix croissant</button>
+        <button class="btn-decroissant">Trier par prix décroissant</button>
+        <button class="btn-filtrer">Filtrer moins de 50€</button>
+    </section>
+
+    <section class="products">
+        <div class="cards"></div>
+    </section>
+    <script src="../script/produits.js"></script>
+</body>
+</html>

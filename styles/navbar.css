@@ -1,0 +1,84 @@
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f3a67; /* Bleu foncé */
+    color: white;
+    padding: 15px 20px;
+    position: relative;
+    width: 100%;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo img {
+    border-radius: 50%;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between; /* Les liens s'espacent également sur toute la largeur */
+    width: 100%;
+}
+
+/* Appliquer le margin-left uniquement sur les grands écrans */
+@media (min-width: 1024px) {
+    header nav {
+        margin-left: 400px;
+    }
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Espacement entre les liens */
+    width: 100%;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+header a:hover {
+    background-color: #2e4b8b; /* Bleu plus clair au survol */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header a {
+        padding: 8px 10px;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 20px;
+    }
+
+    header a {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+}

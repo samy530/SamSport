@@ -1,0 +1,364 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+/* Bannière */
+section.banner {
+    width: 100%;
+    height: 400px;
+    background-image: url('../images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative; /* Nécessaire pour l'overlay */
+}
+
+.banner::before {
+    content: ""; /* Crée un pseudo-élément */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay sombre */
+    z-index: 1; /* Met l'overlay sous le texte */
+}
+
+.banner-content {
+    position: relative;
+    max-width: 1200px;
+    padding: 0 20px;
+    color: white;
+    z-index: 2; /* Assure que le texte soit au-dessus de l'overlay */
+}
+
+.banner-content h1 {
+    font-size: 40px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.banner-content p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.banner-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1f3a67;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.banner-content .btn:hover {
+    background-color: #2e4b8b;
+}
+/* Section des produits recents */
+section.featured-products {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.featured-products .product-card {
+    display: inline-block;
+    width: 25%;  /* Modifier ici pour 4 produits par ligne */
+    padding: 20px;
+    margin: 10px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.featured-products .product-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.featured-products .product-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.featured-products .product-card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.featured-products .btn {
+    padding: 8px 16px;
+    background-color: #1f3a67;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.featured-products .btn:hover {
+    background-color: #2e4b8b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .featured-products .product-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .featured-products .product-card {
+        width: 100%;
+    }
+}
+
+/* Section Produits populaires */
+/* Section Produits populaires */
+section.popular-products {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* Conteneur du carrousel */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%; /* Assure que le carrousel s'ajuste à la largeur du conteneur parent */
+}
+
+/* Le carrousel (les produits) */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Item de chaque produit dans le carrousel */
+.carousel-item {
+    flex: 0 0 200px; /* Chaque produit aura une largeur fixe de 200px */
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box; /* Inclut les marges dans la largeur totale */
+    max-width: 200px; /* Ajoute une largeur maximale de 200px pour les grands écrans */
+}
+
+/* Image des produits */
+.carousel-item img {
+    width: 100%; /* L'image occupe toute la largeur du conteneur */
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Boutons de navigation fixes */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10; /* Assure que les boutons soient au-dessus des produits */
+}
+
+.carousel-btn.left {
+    left: 10px;
+}
+
+.carousel-btn.right {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel-item {
+        flex: 0 0 200px; /* Sur mobile et tablettes, chaque produit occupe 200px */
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item {
+        flex: 0 0 150px; /* Sur très petits écrans, chaque produit occupe 150px */
+    }
+}
+/* Nos avantages */
+section.advantages {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+section.advantages ul {
+    list-style: none;
+    padding: 0;
+}
+
+section.advantages ul li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    section.advantages ul li {
+        font-size: 16px;
+    }
+}
+/* Témoignages clients */
+section.testimonials {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.testimonial {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.testimonial-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.testimonial-info h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.testimonial-rating {
+    display: flex;
+    margin-top: 5px;
+}
+
+.star {
+    color: #ffd700; /* Couleur des étoiles */
+    font-size: 18px;
+    margin-right: 2px;
+}
+
+.star:last-child {
+    color: #ccc; /* Étoile vide */
+}
+
+.testimonial-text {
+    font-size: 16px;
+    font-style: italic;
+    color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .testimonial {
+        padding: 15px;
+    }
+
+    .testimonial-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .testimonial-img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .testimonial-info h3 {
+        font-size: 18px;
+    }
+
+    .testimonial-rating {
+        margin-top: 5px;
+    }
+
+    .testimonial-text {
+        font-size: 14px;
+    }
+}
+
+/* Newsletter Section */
+section.newsletter {
+    padding: 40px 20px;
+    background-color: #1f3a67;
+    text-align: center;
+    color: white;
+}
+
+section.newsletter input[type="email"] {
+    padding: 10px;
+    width: 60%;
+    max-width: 400px;
+    font-size: 16px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+section.newsletter button {
+    padding: 10px 20px;
+    background-color: #2e4b8b;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+section.newsletter button:hover {
+    background-color: #1f3a67;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    section.newsletter input[type="email"] {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    section.newsletter input[type="email"] {
+        width: 100%;
+    }
+} 
