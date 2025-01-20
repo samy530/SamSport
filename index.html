@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - SamSport</title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="icon" href="./images/logo.png" type="image/png">
+</head>
+<body>
+    <!--Barre de navigation-->
+    <header>
+        <div class="logo">
+            <img src="./images/logo.png" alt="SportEmpire Logo" width="50">
+            <span>SamSport</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Accueil</a></li>
+                <li><a href="./pages/produits.html">Produits</a></li>
+                <li><a href="./pages/connexion.html">Connexion</a></li>
+                <li><a href="./pages/contact.html">Contact</a></li>
+                <li><a href="./pages/apropos.html">A-propos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--Bannière-->
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Bienvenue chez SportEmpire</h1>
+            <p>Découvrez les meilleurs vêtements et accessoires pour sportifs.</p>
+            <a href="./pages/produits.html" class="btn">Découvrir</a>
+        </div>
+    </section>
+    <!--Produits récents-->
+    <section class="featured-products">
+        <h2>Produits récents</h2>
+        <div class="product-card">
+            <img src="./images/sweat_jordan.webp" alt="Produit 1">
+            <h3>Jordan Brooklyn Fleece</h3>
+            <p>Sweat à capuche et zip oversize pour homme</p>
+            <p>79.99€</p>
+            <p style="text-decoration: line-through;">129.99€</p>
+            <a href="produits.html" class="btn">Voir plus</a>
+        </div>
+        <div class="product-card">
+            <img src="./images/maillot_barça.webp" alt="Produit 2">
+            <h3>FC Barcelona 2024/2025 Staduim Domicile</h3>
+            <p>Maillot de foot replica Nike Dri-FIT pour homme</p>
+            <p>99.99€</p>
+            <a href="produits.html" class="btn">Voir plus</a>
+        </div>
+        <div class="product-card">
+            <img src="./images/nike_airmaxalphatrainer6.webp" alt="Produit 3">
+            <h3>Nike Air Max Alpha Trainer 6</h3>
+            <p>Chaussure d'entrainement pour homme</p>
+            <p>67.49€</p>
+            <p style="text-decoration: line-through;">89,99€</p>
+            <a href="produits.html" class="btn">Voir plus</a>
+        </div>
+        <div class="product-card">
+            <img src="./images/sweat_jordan.webp" alt="Produit 4">
+            <h3>Jordan Brooklyn Fleece</h3>
+            <p>Sweat à capuche et zip oversize pour homme</p>
+            <p>79.99€</p>
+            <a href="produits.html" class="btn">Voir plus</a>
+        </div>
+        <div class="product-card">
+            <img src="./images/sweat_jordan.webp" alt="Produit 4">
+            <h3>Jordan Brooklyn Fleece</h3>
+            <p>Sweat à capuche et zip oversize pour homme</p>
+            <p>79.99€</p>
+            <a href="produits.html" class="btn">Voir plus</a>
+        </div>
+        <div class="product-card">
+            <img src="./images/sweat_jordan.webp" alt="Produit 4">
+            <h3>Jordan Brooklyn Fleece</h3>
+            <p>Sweat à capuche et zip oversize pour homme</p>
+            <p>79.99€</p>
+            <a href="produits.html" class="btn">Voir plus</a>
+        </div>
+    </section>
+    <!--Produits populaires-->
+    <section class="popular-products">
+        <h2>Produits populaires</h2>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="./images/sweat_jordan.webp" alt="Produit 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/sweat_jordan.webp" alt="Produit 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/sweat_jordan.webp" alt="Produit 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/sweat_jordan.webp" alt="Produit 4">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/sweat_jordan.webp" alt="Produit 5">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/sweat_jordan.webp" alt="Produit 6">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/sweat_jordan.webp" alt="Produit 7">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/sweat_jordan.webp" alt="Produit 8">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/sweat_jordan.webp" alt="Produit 9">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/sweat_jordan.webp" alt="Produit 10">
+                </div>
+            </div>
+            <!-- Les boutons de navigation -->
+            <button class="carousel-btn left" onclick="moveCarousel(-1)">&#10094;</button>
+            <button class="carousel-btn right" onclick="moveCarousel(1)">&#10095;</button>
+        </div>
+    </section>
+    <!--Pourquoi choisir SportEmpire-->
+    <section class="advantages">
+        <h2>Pourquoi choisir SportEmpire ?</h2>
+        <ul>
+            <li>✅ Livraison rapide</li>
+            <li>✅ Paiement sécurisé</li>
+            <li>✅ Retour sous 30 jours</li>
+            <li>✅ Produits exclusifs</li>
+        </ul>
+    </section>
+    <!--Avis clients-->
+    <section class="testimonials">
+        <h2>Avis clients</h2>
+        <div class="testimonial">
+            <div class="testimonial-header">
+                <img src="images/mrbeast.jpeg" alt="Avis client" class="testimonial-img">
+                <div class="testimonial-info">
+                    <h3>Mr beast</h3>
+                    <div class="testimonial-rating">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9734;</span>
+                    </div>
+                </div>
+            </div>
+            <p class="testimonial-text">"J'ai adoré ce produit ! La qualité est incroyable et l'expédition a été rapide. Je recommande vivement."</p>
+        </div>
+    
+        <div class="testimonial">
+            <div class="testimonial-header">
+                <img src="images/fitclaire.jpeg" alt="Avis client" class="testimonial-img">
+                <div class="testimonial-info">
+                    <h3>Fit Claire</h3>
+                    <div class="testimonial-rating">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                </div>
+            </div>
+            <p class="testimonial-text">"Un excellent achat ! Les vêtements sont confortables et parfaitement adaptés aux sportifs. Très satisfaite."</p>
+        </div>
+    </section>
+
+    <!--Newsletter-->
+    <section class="newsletter">
+        <h2>Inscris-toi à notre newsletter</h2>
+        <p>Reste informé sur nos dernières offres et collections.</p>
+        <input type="email" placeholder="Ton email" />
+        <button class="btn">S'abonner</button>
+    </section>
+    <!--Footer-->
+    <footer>
+        <p>&copy; 2025 SamSport - Tous droits réservés</p>
+    </footer>
+    <script src="../script/carousel.js"></script>
+</body>
+</html>
