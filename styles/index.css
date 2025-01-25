@@ -52,17 +52,44 @@ section.banner {
 .banner-content .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #1f3a67;
-    color: white;
+    background-color: black; /* Couleur de fond noir */
+    color: white; /* Texte blanc */
     text-decoration: none;
+    border: 2px solid white; /* Contour blanc */
     border-radius: 5px;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease; /* Transition pour fluidité */
+    position: relative; /* Nécessaire pour effet sur le contour */
+    overflow: hidden;
+}
+
+.banner-content .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: white; /* Couleur de l'effet */
+    z-index: 1;
+    transition: left 0.3s ease;
+}
+
+.banner-content .btn:hover::before {
+    left: 0; /* Animation de remplissage */
 }
 
 .banner-content .btn:hover {
-    background-color: #2e4b8b;
+    color: black; /* Texte devient noir */
+    background-color: white; /* Fond devient blanc */
+    border-color: black; /* Contour devient noir */
 }
+
+.banner-content .btn span {
+    position: relative;
+    z-index: 2; /* Place le texte au-dessus de l’effet */
+}
+
 /* Section des produits recents */
 section.featured-products {
     padding: 40px 20px;
@@ -96,17 +123,44 @@ section.featured-products {
 }
 
 .featured-products .btn {
+    display: inline-block;
     padding: 8px 16px;
-    background-color: #1f3a67;
-    color: white;
+    background-color: black; /* Fond noir */
+    color: white; /* Texte blanc */
     text-decoration: none;
+    border: 2px solid white; /* Contour blanc */
     border-radius: 5px;
     font-size: 14px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease; /* Transition fluide */
+    position: relative; /* Nécessaire pour les effets */
+    overflow: hidden; /* Cache les débordements */
+}
+
+.featured-products .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: white; /* Couleur de l'effet */
+    z-index: 1;
+    transition: left 0.3s ease;
+}
+
+.featured-products .btn:hover::before {
+    left: 0; /* Effet de remplissage */
 }
 
 .featured-products .btn:hover {
-    background-color: #2e4b8b;
+    color: black; /* Texte noir au survol */
+    background-color: white; /* Fond blanc */
+    border-color: black; /* Contour noir */
+}
+
+.featured-products .btn span {
+    position: relative;
+    z-index: 2; /* Positionne le texte au-dessus de l'effet */
 }
 
 /* Responsive */
@@ -122,7 +176,6 @@ section.featured-products {
     }
 }
 
-/* Section Produits populaires */
 /* Section Produits populaires */
 section.popular-products {
     padding: 40px 20px;
@@ -204,68 +257,124 @@ h2 {
         flex: 0 0 150px; /* Sur très petits écrans, chaque produit occupe 150px */
     }
 }
-/* Nos avantages */
+/* Section Nos Avantages */
 section.advantages {
     padding: 40px 20px;
-    background-color: #f4f4f4;
+    background-color: black; /* Fond noir */
+    color: white; /* Texte blanc */
     text-align: center;
+}
+
+section.advantages h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: white; /* Titre blanc */
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+section.advantages h2::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background: white; /* Ligne décorative sous le titre */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 section.advantages ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: inline-block; /* Pour centrer le contenu */
 }
 
 section.advantages ul li {
     font-size: 18px;
     margin: 10px 0;
+    padding: 8px 15px; /* Ajuste le remplissage autour du texte */
+    border: 2px solid white; /* Contour blanc */
+    border-radius: 5px; /* Coins arrondis */
+    background-color: transparent; /* Fond transparent */
+    color: white; /* Texte blanc */
+    display: inline-block; /* Pour ajuster la largeur au contenu */
+    text-align: center;
+    transition: all 0.3s ease; /* Animation pour un effet doux */
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     section.advantages ul li {
         font-size: 16px;
+        padding: 6px 12px; /* Ajuste la taille sur mobile */
     }
 }
+
+
 /* Témoignages clients */
 section.testimonials {
-    padding: 40px 20px;
-    background-color: #ffffff;
+    padding: 60px 20px;
+    background-color: #111; /* Fond noir pour un look moderne */
+    color: #fff; /* Texte blanc */
     text-align: center;
 }
 
-h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
+section.testimonials h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+section.testimonials h2::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background: #ffffff; /* Ligne décorative sous le titre */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .testimonial {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    margin: 20px 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: #222; /* Fond gris foncé pour les témoignages */
+    padding: 25px;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    max-width: 700px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
 }
 
 .testimonial-header {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .testimonial-img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    margin-right: 15px;
+    border: 2px solid #fff; /* Bordure blanche autour de l'image */
+    margin-right: 20px;
 }
 
 .testimonial-info h3 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
+    color: #ffffff;
 }
 
 .testimonial-rating {
@@ -274,30 +383,31 @@ h2 {
 }
 
 .star {
-    color: #ffd700; /* Couleur des étoiles */
-    font-size: 18px;
-    margin-right: 2px;
+    color: #ffd700; /* Couleur des étoiles (doré) */
+    font-size: 20px;
+    margin-right: 3px;
 }
 
 .star:last-child {
-    color: #ccc; /* Étoile vide */
+    color: #555; /* Étoile vide en gris foncé */
 }
 
 .testimonial-text {
-    font-size: 16px;
+    font-size: 18px;
     font-style: italic;
-    color: #555;
+    color: #e0e0e0; /* Texte en gris clair */
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     .testimonial {
-        padding: 15px;
+        padding: 20px;
     }
 
     .testimonial-header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
     }
 
     .testimonial-img {
@@ -306,48 +416,80 @@ h2 {
     }
 
     .testimonial-info h3 {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .testimonial-rating {
-        margin-top: 5px;
+        margin-top: 10px;
     }
 
     .testimonial-text {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
+
 /* Newsletter Section */
 section.newsletter {
-    padding: 40px 20px;
-    background-color: #1f3a67;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #222, #444); /* Dégradé moderne noir/gris */
     text-align: center;
-    color: white;
+    color: #ffffff;
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Ombre subtile */
+}
+
+section.newsletter h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+section.newsletter p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #cccccc; /* Texte secondaire */
 }
 
 section.newsletter input[type="email"] {
-    padding: 10px;
-    width: 60%;
+    padding: 12px 15px;
+    width: 50%;
     max-width: 400px;
     font-size: 16px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: none;
+    border-radius: 30px; /* Coins très arrondis */
+    border: 2px solid #ffffff; /* Bordure blanche */
+    background-color: #333; /* Fond gris foncé */
+    color: #ffffff;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+section.newsletter input[type="email"]::placeholder {
+    color: #aaaaaa;
+}
+
+section.newsletter input[type="email"]:focus {
+    border-color: #ffd700;
+    background-color: #444;
 }
 
 section.newsletter button {
-    padding: 10px 20px;
-    background-color: #2e4b8b;
-    color: white;
+    display: block; /* Place le bouton sur une nouvelle ligne */
+    margin: 15px auto 0 auto; /* Centre horizontalement le bouton */
+    padding: 12px 25px;
     font-size: 16px;
-    border-radius: 5px;
     border: none;
+    border-radius: 30px; /* Coins très arrondis */
+    background: linear-gradient(135deg, #ffd700, #ffa500); /* Dégradé doré/orange */
+    color: #222; /* Texte sombre */
+    font-weight: bold;
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 section.newsletter button:hover {
-    background-color: #1f3a67;
+    transform: translateY(-3px); /* Animation au hover */
+    box-shadow: 0 6px 20px rgba(255, 165, 0, 0.6); /* Ombre lumineuse */
 }
 
 /* Responsive */
@@ -361,4 +503,4 @@ section.newsletter button:hover {
     section.newsletter input[type="email"] {
         width: 100%;
     }
-} 
+}

@@ -76,8 +76,22 @@ function genererProduits(produits) {
         const buttonElement = document.createElement("a");
         buttonElement.classList.add("cta-button");
         buttonElement.innerText = "Ajouter au panier";
-        // Modifie le lien pour inclure l'ID du produit
-        buttonElement.href = `#`;
+        buttonElement.href = "#"; // Bloque temporairement la redirection
+        buttonElement.dataset.id = produit.id; // Ajouter l'ID du produit
+
+        // Gestion de l'événement clic pour ajouter au panier
+        buttonElement.addEventListener("click", function (e) {
+            e.preventDefault(); // Empêche le comportement par défaut (redirection)
+
+            // Récupérer l'ID du produit cliqué
+            const produitId = parseInt(this.dataset.id, 10);
+
+            // Ajouter le produit au panier
+            ajouterAuPanier(produitId);
+
+            // Mettre à jour le compteur du panier dans la navbar
+            mettreAJourCompteurPanier();
+        });
 
         article.appendChild(imageElement);
         article.appendChild(nomElement);
@@ -87,6 +101,24 @@ function genererProduits(produits) {
 
         sectionCards.appendChild(article);
     });
+}
+
+// Fonction pour ajouter un produit au panier
+function ajouterAuPanier(id) {
+    let panier = JSON.parse(localStorage.getItem('panier')) || [];
+    const produit = produits.find(p => p.id === id);
+
+    if (produit) {
+        panier.push(produit);
+        localStorage.setItem('panier', JSON.stringify(panier));
+    }
+}
+
+// Fonction pour mettre à jour le compteur du panier dans la navbar
+function mettreAJourCompteurPanier() {
+    const panier = JSON.parse(localStorage.getItem('panier')) || [];
+    const compteurElement = document.querySelector(".panier-compteur");
+    compteurElement.innerText = panier.length;
 }
 
 // Fonction de recherche
@@ -119,5 +151,6 @@ document.querySelector(".btn-main").addEventListener("click", function () {
     genererProduits(produits);
 });
 
-// Afficher initialement tous les produits
+// Initialisation
 genererProduits(produits);
+mettreAJourCompteurPanier(); // Met à jour le compteur du panier à l'initialisation

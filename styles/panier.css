@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.panier {
+    padding: 20px;
+    text-align: center;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.cart-item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cart-item-details {
+    text-align: left;
+}
+
+.total {
+    margin-top: 20px;
+}
+
+.total-price {
+    font-size: 1.5em;
+    color: #000000;
+}
+
+/* Boutons */
+.cart-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.clear-cart, .order-cart {
+    padding: 12px 30px;
+    font-size: 16px;
+    color: white;
+    border: 2px solid #000000; /* Bordure noire */
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: transparent; /* Fond transparent pour l'effet noir et blanc */
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Bouton "Vider le panier" */
+.clear-cart {
+    color: #000000; /* Texte noir */
+}
+
+.clear-cart:hover {
+    background-color: #000000; /* Fond noir au survol */
+    color: white; /* Texte blanc */
+    border-color: white; /* Bordure blanche */
+}
+
+/* Bouton "Commander" */
+.order-cart {
+    color: #000000; /* Texte noir */
+}
+
+.order-cart:hover {
+    background-color: #000000; /* Fond noir au survol */
+    color: white; /* Texte blanc */
+    border-color: white; /* Bordure blanche */
+}
+
+/* Boutons au clic */
+.clear-cart:active, .order-cart:active {
+    transform: scale(0.98); /* Réduction du bouton lors du clic */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cart-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Style pour le bouton Supprimer */
+.remove {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+}
+
+.remove:hover {
+    background-color: #e60000;
+}

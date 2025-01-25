@@ -6,30 +6,81 @@
     <title>Connexion - SamSport</title>
     <link rel="stylesheet" href="../styles/connexion.css">
     <link rel="icon" href="../images/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 </head>
 <body>
-    
-    <!-- Flèche de retour -->
-    <a href="../index.html" class="back-arrow">
-        <i class="fas fa-arrow-left"></i> 
-    </a>
 
-    <div class="form-container">
-        <h2>Se connecter</h2>
-        <form action="#" method="post">
-            <div class="input-field">
-                <label for="email">Email</label>
-                <input type="email" id="email" required>
+<!-- Flèche de retour -->
+<a href="../index.html" class="back-arrow">
+    <i class="fas fa-arrow-left"></i>
+</a>
+
+<!-- Container principal -->
+<div class="container" id="container">
+    <!-- Formulaire d'inscription -->
+    <div class="form-container sign-up-container">
+        <form action="#">
+            <h1>Créer un compte</h1>
+            <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
             </div>
-            <div class="input-field">
-                <label for="password">Mot de passe</label>
-                <input type="password" id="password" required>
-            </div>
-            <button type="submit">Se connecter</button>
+            <span>Ou utilisez votre email pour l'inscription</span>
+            <input type="text" placeholder="Nom" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Mot de passe" />
+            <button>Créer un compte</button>
         </form>
-        <p class="bottom-link">Pas encore de compte ? <a href="inscription.html">Créer un compte</a></p>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <!-- Formulaire de connexion -->
+    <div class="form-container sign-in-container">
+        <form action="#">
+            <h1>Se connecter</h1>
+            <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>Ou utilisez votre compte</span>
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Mot de passe" />
+            <a href="#">Mot de passe oublié ?</a>
+            <button>Se connecter</button>
+        </form>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>Bienvenue !</h1>
+                <p>Pour rester connecté, connectez-vous avec vos informations personnelles.</p>
+                <button class="ghost" id="signIn">Se connecter</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>Bonjour, ami !</h1>
+                <p>Entrez vos informations personnelles et commencez votre aventure avec nous.</p>
+                <button class="ghost" id="signUp">S'inscrire</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+
+    signUpButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+    });
+
+    signInButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+    });
+</script>
+
 </body>
 </html>

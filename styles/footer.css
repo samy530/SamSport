@@ -1,9 +1,45 @@
-/* Footer */
 footer {
-    padding: 20px;
-    background-color: #1f3a67;
-    color: white;
+    padding: 20px 0;
+    background: linear-gradient(135deg, #030303, #1a1f2a); /* Dégradé moderne bleu foncé */
     text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    border-top: 4px solid #ffd700; /* Ligne dorée pour un effet premium */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2); /* Ombre subtile au-dessus */
 }
 
+footer p {
+    margin: 0;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 16px;
+}
 
+footer a {
+    color: #ffd700; /* Lien doré */
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Ajout d'icônes de réseaux sociaux */
+footer .social-icons {
+    margin-top: 10px;
+}
+
+footer .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 18px;
+    color: #ffd700; /* Icônes dorées */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    transform: scale(1.2); /* Légère animation au survol */
+    color: #ffffff; /* Passe en blanc au survol */
+}

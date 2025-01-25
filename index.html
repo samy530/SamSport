@@ -8,30 +8,40 @@
     <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="icon" href="./images/logo.png" type="image/png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 <body>
     <!--Barre de navigation-->
     <header>
         <div class="logo">
-            <img src="./images/logo.png" alt="SportEmpire Logo" width="50">
+            <img src="../images/logo.png" alt="SportEmpire Logo" width="50">
             <span>SamSport</span>
         </div>
         <nav>
             <ul>
-                <li><a href="./index.html">Accueil</a></li>
-                <li><a href="./pages/produits.html">Produits</a></li>
-                <li><a href="./pages/connexion.html">Connexion</a></li>
-                <li><a href="./pages/contact.html">Contact</a></li>
-                <li><a href="./pages/apropos.html">A-propos</a></li>
+                <li><a href="./index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="./pages/produits.html"><i class="fas fa-box"></i> Produits</a></li>
+                <li><a href="./pages/connexion.html"><i class="fas fa-sign-in-alt"></i> Connexion</a></li>
+                <li><a href="./pages/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="./pages/apropos.html"><i class="fas fa-info-circle"></i> À-propos</a></li>
+                <li>
+                    <a href="./pages/panier.html" class="panier-link">
+                        <i class="fas fa-shopping-cart"></i> Panier
+                        <span class="panier-compteur">0</span>
+                    </a>
+                </li>
             </ul>
         </nav>
-    </header>
+        
+    </header>   
     <!--Bannière-->
     <section class="banner">
         <div class="banner-content">
             <h1>Bienvenue chez SportEmpire</h1>
             <p>Découvrez les meilleurs vêtements et accessoires pour sportifs.</p>
-            <a href="./pages/produits.html" class="btn">Découvrir</a>
+            <a href="./pages/produits.html" class="btn"><span>Découvrir</span></a>
         </div>
     </section>
     <!--Produits récents-->
@@ -43,14 +53,14 @@
             <p>Sweat à capuche et zip oversize pour homme</p>
             <p>79.99€</p>
             <p style="text-decoration: line-through;">129.99€</p>
-            <a href="produits.html" class="btn">Voir plus</a>
+            <a href="produits.html" class="btn"><span>Voir plus</span></a>
         </div>
         <div class="product-card">
             <img src="./images/maillot_barça.webp" alt="Produit 2">
             <h3>FC Barcelona 2024/2025 Staduim Domicile</h3>
             <p>Maillot de foot replica Nike Dri-FIT pour homme</p>
             <p>99.99€</p>
-            <a href="produits.html" class="btn">Voir plus</a>
+            <a href="produits.html" class="btn"><span>Voir plus</span></a>
         </div>
         <div class="product-card">
             <img src="./images/nike_airmaxalphatrainer6.webp" alt="Produit 3">
@@ -58,28 +68,28 @@
             <p>Chaussure d'entrainement pour homme</p>
             <p>67.49€</p>
             <p style="text-decoration: line-through;">89,99€</p>
-            <a href="produits.html" class="btn">Voir plus</a>
+            <a href="produits.html" class="btn"><span>Voir plus</span></a>
         </div>
         <div class="product-card">
             <img src="./images/sweat_jordan.webp" alt="Produit 4">
             <h3>Jordan Brooklyn Fleece</h3>
             <p>Sweat à capuche et zip oversize pour homme</p>
             <p>79.99€</p>
-            <a href="produits.html" class="btn">Voir plus</a>
+            <a href="produits.html" class="btn"><span>Voir plus</span></a>
         </div>
         <div class="product-card">
             <img src="./images/sweat_jordan.webp" alt="Produit 4">
             <h3>Jordan Brooklyn Fleece</h3>
             <p>Sweat à capuche et zip oversize pour homme</p>
             <p>79.99€</p>
-            <a href="produits.html" class="btn">Voir plus</a>
+            <a href="produits.html" class="btn"><span>Voir plus</span></a>
         </div>
         <div class="product-card">
             <img src="./images/sweat_jordan.webp" alt="Produit 4">
             <h3>Jordan Brooklyn Fleece</h3>
             <p>Sweat à capuche et zip oversize pour homme</p>
             <p>79.99€</p>
-            <a href="produits.html" class="btn">Voir plus</a>
+            <a href="produits.html" class="btn"><span>Voir plus</span></a>
         </div>
     </section>
     <!--Produits populaires-->
@@ -127,12 +137,17 @@
     <section class="advantages">
         <h2>Pourquoi choisir SportEmpire ?</h2>
         <ul>
-            <li>✅ Livraison rapide</li>
-            <li>✅ Paiement sécurisé</li>
-            <li>✅ Retour sous 30 jours</li>
-            <li>✅ Produits exclusifs</li>
+            <li>✅ Livraison rapide et gratuite</li>
+            <li>✅ Paiement sécurisé à 100%</li>
+            <li>✅ Retour sous 15 jours</li>
+            <li>✅ Produits exclusifs de grandes marques</li>
+            <li>✅ Service client disponible 24/7</li>
+            <li>✅ Garantie satisfait ou remboursé</li>
+            <li>✅ Offres spéciales pour les membres</li>
+            <li>✅ Programme de fidélité avantageux</li>
         </ul>
     </section>
+    
     <!--Avis clients-->
     <section class="testimonials">
         <h2>Avis clients</h2>
@@ -179,9 +194,23 @@
         <button class="btn">S'abonner</button>
     </section>
     <!--Footer-->
-    <footer>
-        <p>&copy; 2025 SamSport - Tous droits réservés</p>
-    </footer>
-    <script src="../script/carousel.js"></script>
+   <footer>
+     <p>&copy; 2025 SamSport - Tous droits réservés</p>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+   </footer>
+
+
+    <script src="./script/carousel.js"></script>
+    <script src="./script/app.js"></script>
 </body>
 </html>

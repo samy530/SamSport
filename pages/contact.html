@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../styles/navbar.css">
     <link rel="stylesheet" href="../styles/contact.css">
     <link rel="icon" href="../images/logo.png" type="image/png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
 </head>
 <body>
     <header>
@@ -16,30 +18,30 @@
         </div>
         <nav>
             <ul>
-                <li><a href="../index.html">Accueil</a></li>
-                <li><a href="./produits.html">Produits</a></li>
-                <li><a href="./connexion.html">Connexion</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-                <li><a href="./apropos.html">A-propos</a></li>
+                <li><a href="../index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="./produits.html"><i class="fas fa-box"></i> Produits</a></li>
+                <li><a href="./connexion.html"><i class="fas fa-sign-in-alt"></i> Connexion</a></li>
+                <li><a href="./contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="./apropos.html"><i class="fas fa-info-circle"></i> À-propos</a></li>
+                <li>
+                    <a href="./panier.html" class="panier-link">
+                        <i class="fas fa-shopping-cart"></i> Panier
+                        <span class="panier-compteur">0</span>
+                    </a>
+                </li>
             </ul>
         </nav>
-    </header>
+    </header>  
     <div class="container">
         <div class="text-section">
             <p>
-                Nous serions ravis d'avoir de vos nouvelles !<br> Si vous avez des questions, 
-                des commentaires ou si vous avez besoin d'une assistance supplémentaire, 
-                n'hésitez pas à nous contacter.<br> Notre équipe dévouée est là pour vous aider.<br>
-                Vous pouvez nous joindre en utilisant le formulaire de contact. 
-                Nous nous efforçons de répondre à tous les messages dans les plus brefs délais. 
-                Votre satisfaction est notre priorité.<br>
-                Nous apprécions vos retours et suggestions. 
-                Votre avis est important pour nous, car il nous aide à améliorer constamment nos services et à mieux répondre à vos besoins.<br>
-                Merci de nous faire confiance et de nous donner l'opportunité de vous servir.
-                Nous sommes impatients de vous aider et de rendre votre expérience avec SamSport la meilleure possible.<br><br>
+                Nous sommes à votre écoute !<br>  
+                Une question, un commentaire ou besoin d'aide ? Contactez-nous via notre formulaire, et notre équipe dédiée vous répondra rapidement.<br>  
+                Vos avis et suggestions comptent énormément pour nous. Ils nous aident à améliorer nos services pour mieux vous satisfaire.<br>  
+                Merci de votre confiance. Ensemble, faisons de votre expérience avec SamSport un moment exceptionnel !<br><br>
                 <span>L'équipe de SamSport</span>
             </p>
-        </div>
+        </div>        
         <form action="#" method="post">
             <h3>Contactez-nous</h3>
             <input type="text" id="name" placeholder="Votre Nom" required>
@@ -50,6 +52,6 @@
             </button>
         </form>
     </div>
-
+    <script src="../script/app.js"></script>
 </body>
 </html>

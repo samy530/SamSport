@@ -1,57 +1,96 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1f3a67; /* Bleu foncé */
-    color: white;
+    background: rgba(255, 255, 255, 0.8); /* Fond transparent */
+    backdrop-filter: blur(10px); /* Effet de flou */
+    border-radius: 15px; /* Coins arrondis */
     padding: 15px 20px;
     position: relative;
     width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
 }
 
+/* Logo */
 header .logo {
     font-size: 24px;
     font-weight: bold;
     display: flex;
     align-items: center;
     gap: 10px;
+    font-family: 'Poppins', sans-serif;
+    color: #000000; /* Couleur du texte */
 }
 
 header .logo img {
     border-radius: 50%;
 }
 
-header nav {
-    display: flex;
-    justify-content: space-between; /* Les liens s'espacent également sur toute la largeur */
-    width: 100%;
-}
-
-/* Appliquer le margin-left uniquement sur les grands écrans */
-@media (min-width: 1024px) {
-    header nav {
-        margin-left: 400px;
-    }
-}
-
-header ul {
+/* Navigation */
+header nav ul {
     list-style: none;
     display: flex;
-    gap: 30px; /* Espacement entre les liens */
-    width: 100%;
+    gap: 20px;
 }
 
-header a {
-    color: white;
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    color: #000000; /* Texte noir */
     text-decoration: none;
+    font-size: 16px;
     padding: 10px 15px;
     border-radius: 5px;
-    font-size: 16px;
+    transition: all 0.3s ease; /* Animation fluide */
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espace entre icône et texte */
+    position: relative; /* Clé pour le compteur */
 }
 
-header a:hover {
-    background-color: #2e4b8b; /* Bleu plus clair au survol */
+header nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Fond noir semi-transparent */
+    color: rgb(255, 255, 255); /* Texte blanc */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Panier */
+header nav ul li a .cart-icon {
+    font-size: 20px; /* Taille de l'icône */
+    color: black; /* Couleur noire */
+    transition: transform 0.3s ease, color 0.3s ease; /* Animation fluide */
+}
+
+header nav ul li a .cart-icon:hover {
+    transform: scale(1.1); /* Zoom léger au survol */
+    color: #3b5998; /* Couleur bleue au survol */
+}
+
+header nav ul li a .panier-compteur {
+    position: absolute;
+    top: -5px; /* Ajuster la hauteur */
+    right: -15px; /* Ajuster pour centrer sur l'icône */
+    background-color: rgba(255, 77, 77, 0.8); /* Rouge transparent */
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Styles */
@@ -61,24 +100,24 @@ header a:hover {
         text-align: center;
     }
 
-    header ul {
+    header nav ul {
         flex-direction: column;
         gap: 10px;
     }
 
-    header a {
-        padding: 8px 10px;
+    header nav ul li a {
+        font-size: 14px;
+        padding: 8px 12px;
     }
 }
 
-/* Mobile Styles */
 @media (max-width: 480px) {
     header .logo {
-        font-size: 20px;
+        font-size: 18px;
     }
 
-    header a {
-        font-size: 14px;
-        padding: 6px 8px;
+    header nav ul li a {
+        font-size: 12px;
+        padding: 6px 10px;
     }
 }
