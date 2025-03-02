@@ -4,42 +4,63 @@ const produits = [
         nom: "FC Barcelona 2024/2025 Staduim Domicile",
         prix: 99.99,
         description: "Maillot de foot replica Nike Dri-FIT pour homme",
-        image: "../images/maillot_barça.webp"
+        image: "../images/maillot_barça.jpg"
     },
     {
         id: 2,
         nom: "Nike Air Max Alpha Trainer 6",
         prix: 67.49,
         description: "Chaussure d'entrainement pour homme",
-        image: "../images/nike_airmaxalphatrainer6.webp"
+        image: "../images/nike_airmaxalphatrainer6.jpg"
     },
     {
         id: 3,
         nom: "Jordan Brooklyn Fleece",
         prix: 129.99,
         description: "Sweat à capuche et zip oversize pour homme",
-        image: "../images/sweat_jordan.webp"
+        image: "../images/sweat_jordan.jpg"
     },
     {
         id: 4,
-        nom: "FC Barcelona 2024/2025 Staduim Domicile",
-        prix: 99.99,
-        description: "Maillot de foot replica Nike Dri-FIT pour homme",
-        image: "../images/maillot_barça.webp"
+        nom: "Maillot Domicile Aston Villa FC 24/25",
+        prix: 100.00,
+        description: "Un maillot domicile de l'Aston Villa FC dédié aux plus grands fans du club, conçu en matières recyclées.",
+        image: "../images/aston_villa_maillot_2025.png"
     },
     {
         id: 5,
-        nom: "Nike Air Max Alpha Trainer 6",
-        prix: 67.49,
-        description: "Chaussure d'entrainement pour homme",
-        image: "../images/nike_airmaxalphatrainer6.webp"
+        nom: "T-shirt Club Tennis Enfants",
+        prix: 25.00,
+        description: "Un t-shirt de tennis ras-du-cou qui te garde au frais, au sec et prêt à tout.",
+        image: "../images/tshirt_tennis_enfant.png"
     },
     {
         id: 6,
-        nom: "Jordan Brooklyn Fleece",
-        prix: 129.99,
-        description: "Sweat à capuche et zip oversize pour homme",
-        image: "../images/sweat_jordan.webp"
+        nom: "Chaussure Campus 00s",
+        prix: 120.00,
+        description: "Une Campus qui fait évoluer l'héritage.",
+        image: "../images/chaussure_campus_00s_femme.png"
+    },
+    {
+        id: 7,
+        nom: "Nike Dri-FIT Club",
+        prix: 24.99,
+        description: "Casquette Swoosh avec structure",
+        image: "../images/casquette_nike.jpg"
+    },
+    {
+        id: 8,
+        nom: "Nike ACG",
+        prix: 74.99,
+        description: "Serviette de running",
+        image: "../images/serviette_nike_orange.jpg"
+    },
+    {
+        id: 9,
+        nom: "Nike Pegasus Premium",
+        prix: 209.99,
+        description: "Chaussure de running sur route pour femme",
+        image: "../images/nike_pegasus_premium.jpg"
     }
 ];
 
